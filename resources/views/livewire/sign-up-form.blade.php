@@ -1,7 +1,11 @@
 <div x-data="{ marriedCheck: $wire.entangle('advance.isMarried'), isBasicForm: $wire.entangle('isBasicForm') }">
 
     <form wire:submit="submit">
-        <h2 class="text-xl font-medium mb-4" x-text="isBasicForm ? 'Basic Form' : 'Advance Form'"></h2>
+
+        <div class="flex justify-between">
+            <h2 class="text-xl font-medium mb-4" x-text="isBasicForm ? 'Basic Form' : 'Advance Form'"></h2>
+            <div wire:loading>Loading..</div>
+        </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4" x-show="isBasicForm">
             <x-input.text name="basic.firstName" label="First Name" />
