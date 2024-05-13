@@ -21,8 +21,12 @@ class Advance extends Form
     public ?bool $isWidow = null;
     public ?bool $isMarriadInPast = null;
 
-    public function getMarriageDate(): Carbon
+    public function getMarriageDate(): ?Carbon
     {
+        if (!$this->marriageYear) {
+            return null;
+        }
+
         return Carbon::create(
             $this->marriageYear,
             $this->marriageMonth,
