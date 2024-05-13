@@ -17,7 +17,7 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4" x-show="!isBasicForm">
-            <x-input.radio name="advance.isMarried" label="Are you married?" />
+            <x-input.radio :live="true" name="advance.isMarried" label="Are you married?" />
 
             <!-- Conditional Fields for isMarried -->
             <div style="display: none" x-show="marriedCheck === true">
