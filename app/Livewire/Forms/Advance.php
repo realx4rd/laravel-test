@@ -44,7 +44,7 @@ class Advance extends Form
             'marriageCountry' => $this->marriageCountry,
             'isWidow' => $this->isWidow ? 'yes' : 'no',
             'isMarriadInPast' => $this->isMarriadInPast ?   'yes' : 'no',
-            'marriageDate' => $this->getMarriageDate()->format('Y-m-d'),
+            'marriageDate' => $this->getMarriageDate()?->format('Y-m-d'),
         ];
     }
 
