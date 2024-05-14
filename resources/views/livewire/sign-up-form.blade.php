@@ -7,7 +7,7 @@
             <div wire:loading>Loading..</div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4" x-show="isBasicForm">
+        <div class="grid  gap-4" x-show="isBasicForm">
             <x-input.text name="basic.firstName" label="First Name" />
             <x-input.text name="basic.lastName" label="Last Name" />
             <x-input.text name="basic.address" label="Address" />
@@ -16,7 +16,7 @@
             <x-input.date name="basic.birth" label="Date of birth" />
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4" x-show="!isBasicForm">
+        <div class="grid  gap-4" x-show="!isBasicForm">
             <x-input.radio :live="true" name="advance.isMarried" label="Are you married?" />
 
             <!-- Conditional Fields for isMarried -->
@@ -36,7 +36,7 @@
             </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+        <div class="grid  gap-4 mt-6">
             <div class="flex justify-between">
                 <x-primary-button type="submit" x-bind:disabled="isBasicForm">Submit</x-primary-button>
                 <div class="flex justify-end gap-2">
